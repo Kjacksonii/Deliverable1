@@ -12,14 +12,15 @@ namespace Deliverable1
             string userResponse = null;
             string feet = null;
             string yes = null;
-            while (userResponse == yes)
+            string memes = null;
+            string fidgetspinners = null;
+            do
             {
 
                 Console.Write("What would you like to convert to?");
                 Console.ReadLine();
 
                 string inches = null;
-                string fidgetspinners = null;
                 if (userResponse == inches)
                 {
                     Console.Write("Enter a distance in fidget spinners: ");
@@ -29,62 +30,60 @@ namespace Deliverable1
                     Console.WriteLine("Would you like to convert another?");
                     Console.ReadLine();
                 }
-
-                else if (userResponse == yes)
+                if (userResponse == yes)
                 {
                     Console.Write("What would you like to convert to?");
                     Console.ReadLine();
                 }
 
-                else if (userResponse == fidgetspinners)
+                if (userResponse == fidgetspinners)
                 {
                     Console.Write("Enter a distance in inches: ");
-                    Inch = (char)Int32.Parse(Console.ReadLine());
+                    Inch = (char)int.Parse(Console.ReadLine());
                     Fidget = (char)(Inch / 3.5f);
                     Console.WriteLine("Distance in fidget spinners:" + Fidget);
                     Console.WriteLine("Would you like to convert another?");
                     Console.ReadLine();
                 }
 
-                else if (userResponse == yes)
+                if (userResponse == yes)
                 {
                     Console.Write("What would you like to convert to?");
                     Console.ReadLine();
                 }
-                else if (userResponse == feet)
+                if (userResponse == feet)
                 {
-                    Console.Write("Enter a distance in memes: ");
+                    Console.Write("Enter a distance in Memes: ");
                     Feet = (char)int.Parse(Console.ReadLine());
                     int Memes = Feet * 5;
-                    Console.WriteLine("Distance in feet:" + Memes);
+                    Console.WriteLine("Distance in Memes:" + Memes);
                     Console.WriteLine("Would you like to convert another?");
                     Console.ReadLine();
                 }
                 if (userResponse == yes)
-
-                    Console.Write("What would you like to convert to?");
+                {
+                    Console.WriteLine("What would you like to convert to?");
                     Console.ReadLine();
-                string memes = null;
+
+                }
                 if (userResponse == memes)
-                    Console.Write("Enter a distance in inches: ");
-                Inch = (char)Int32.Parse(Console.ReadLine());
-                Fidget = (char)(Inch / 5);
-                    Console.WriteLine("Distance in fidget spinners:" + Fidget);
+                {
+                    Console.Write("Enter a distance in feet: ");
+                    char mem = (char)int.Parse(Console.ReadLine());
+                    int meme = (char)(mem / 5);
+                    Console.WriteLine("Distance in memes:" + meme);
                     Console.WriteLine("Would you like to convert another?");
                     Console.ReadLine();
+                }
 
-                if (userResponse != "yes")
-
-                    System.Environment.Exit(1);
-
-
+            } while (userResponse != yes);
+            {
+                Console.WriteLine();
+                System.Environment.Exit(1);
             }
-
         }
+
+
     }
+
 }
-
-        
-    
-
-
